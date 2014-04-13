@@ -28,7 +28,7 @@ A barebones AppEngine application that uses Facebook for login.
 
 """
 
-import config
+import myconfig
 import facebook
 import webapp2
 import os
@@ -38,11 +38,11 @@ import urllib2
 from google.appengine.ext import db
 from webapp2_extras import sessions
 
-FACEBOOK_APP_ID = config.FACEBOOK_APP_ID
-FACEBOOK_APP_SECRET = config.FACEBOOK_APP_SECRET
+FACEBOOK_APP_ID     = myconfig.FACEBOOK_APP_ID
+FACEBOOK_APP_SECRET = myconfig.FACEBOOK_APP_SECRET
 
 config = {}
-config['webapp2_extras.sessions'] = dict(secret_key='')
+config['webapp2_extras.sessions'] = dict(secret_key='unguessable_ma_veramente_di_brutto')
 
 
 class User(db.Model):
